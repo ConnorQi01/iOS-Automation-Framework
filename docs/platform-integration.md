@@ -1,4 +1,4 @@
-# Test Platform Integration
+# MeteorTest Platform Integration
 
 This repository is a test project, not the test platform itself.
 
@@ -12,7 +12,7 @@ This repository owns:
 - iOS UI automation tests under `UI_Automation/`.
 - Performance scripts under `Performance/`.
 - Test data, page objects, fixtures, and assertions.
-- `test-platform.yml`, which describes executable suites and required capabilities.
+- `meteortest.yml`, which describes executable suites and required capabilities.
 
 This repository does not own:
 
@@ -26,15 +26,15 @@ This repository does not own:
 ## Execution Model
 
 ```text
-TestPlatform
+MeteorTest
   -> creates a task with project, suite, environment, and optional app artifact
 
 Local Agent
-  -> reads test-platform.yml
+  -> reads meteortest.yml
   -> downloads or locates the ipa/app artifact when needed
   -> runs the selected suite command
   -> collects logs, screenshots, and Allure results
-  -> uploads results back to TestPlatform
+  -> uploads results back to MeteorTest
 
 iOS-Automation-Framework
   -> contains the test code and produces test outputs
